@@ -3,7 +3,7 @@ const violeta = document.getElementById('violeta')
 const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
 const btnEmpezar=document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 5
+const ULTIMO_NIVEL = 2
 
 class Juego{
     constructor(){
@@ -118,7 +118,6 @@ class Juego{
                 } else {
                     setTimeout(this.siguienteNivel, 2000)
                 }
-
             }
         } else {
             this.perdioElJuego()
