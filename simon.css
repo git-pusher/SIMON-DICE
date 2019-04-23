@@ -29,11 +29,11 @@ body {
 
   
  
-  .header > h2{
-    margin: 0 10px 0 0;
-    font-size: 2em;
-    color: #f0c32b;
-    display: inline-block;
+  
+  #rules {
+    padding: 10px;
+    text-align: end;
+    margin-right: 30px;
   }
   
 
@@ -149,6 +149,11 @@ background: #ffbe76;
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
   visibility: hidden;
+}
+
+.nivel > h2 {
+  font-family: 'Shadows Into Light';
+  padding-left: 20px;
 }
 
 @-webkit-keyframes fadeOut {

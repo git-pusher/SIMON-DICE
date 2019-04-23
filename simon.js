@@ -3,7 +3,8 @@ const violeta = document.getElementById('violeta')
 const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
 const btnEmpezar=document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 2
+const level = document.getElementById('level')
+const ULTIMO_NIVEL = 3
 
 class Juego{
     constructor(){
@@ -111,7 +112,9 @@ class Juego{
         if (numeroColor === this.secuencia[this.subNivel]) {
             this.subNivel++
             if (this.subNivel === this.nivel) {
+                
                 this.nivel++
+                level.innerHTML = this.nivel
                 this.eliminarEventosClick()
                 if (this.nivel === (ULTIMO_NIVEL + 1)) {
                     this.ganoElJuego()
@@ -125,12 +128,12 @@ class Juego{
     }
 
     ganoElJuego() {
-        swal('Platzi', '¡Ganaste!', 'success')
+        swal('Simón dice:', '¡Ganaste!', 'success')
         .then(this.inicializar)
     }
 
     perdioElJuego() {
-        swal('Platzi', '¡Perdiste!', 'error')
+        swal('Simón dice:', '¡Perdiste!', 'error')
         .then(() => {
             this.eliminarEventosClick()
             this.inicializar()
